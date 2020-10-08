@@ -15,60 +15,60 @@ class Logger {
       Timber.tag(TAG).d(throwable)
     }
 
-    fun d(message: String, vararg args: Any) {
-      Timber.tag(TAG).d(message, args)
+    fun d(message: String) {
+      Timber.tag(TAG).d(message)
     }
 
-    fun d(throwable: Throwable, message: String, vararg args: Any) {
-      Timber.tag(TAG).d(throwable, message, args)
+    fun d(throwable: Throwable, message: String) {
+      Timber.tag(TAG).d(throwable, message)
     }
 
     fun e(throwable: Throwable) {
       Timber.tag(TAG).e(throwable)
     }
 
-    fun e(message: String, vararg args: Any) {
-      Timber.tag(TAG).e(message, args)
+    fun e(message: String) {
+      Timber.tag(TAG).e(message)
     }
 
-    fun e(throwable: Throwable, message: String, vararg args: Any) {
-      Timber.tag(TAG).e(throwable, message, args)
+    fun e(throwable: Throwable, message: String) {
+      Timber.tag(TAG).e(throwable, message)
     }
 
     fun i(throwable: Throwable) {
       Timber.tag(TAG).i(throwable)
     }
 
-    fun i(message: String, vararg args: Any) {
-      Timber.tag(TAG).i(message, args)
+    fun i(message: String) {
+      Timber.tag(TAG).i(message)
     }
 
-    fun i(throwable: Throwable, message: String, vararg args: Any) {
-      Timber.tag(TAG).i(throwable, message, args)
+    fun i(throwable: Throwable, message: String) {
+      Timber.tag(TAG).i(throwable, message)
     }
 
     fun v(throwable: Throwable) {
       Timber.tag(TAG).v(throwable)
     }
 
-    fun v(message: String, vararg args: Any) {
-      Timber.tag(TAG).v(message, args)
+    fun v(message: String) {
+      Timber.tag(TAG).v(message)
     }
 
-    fun v(throwable: Throwable, message: String, vararg args: Any) {
-      Timber.tag(TAG).v(throwable, message, args)
+    fun v(throwable: Throwable, message: String) {
+      Timber.tag(TAG).v(throwable, message)
     }
 
     fun wtf(throwable: Throwable) {
       Timber.tag(TAG).wtf(throwable)
     }
 
-    fun wtf(message: String, vararg args: Any) {
-      Timber.tag(TAG).wtf(message, args)
+    fun wtf(message: String) {
+      Timber.tag(TAG).wtf(message)
     }
 
-    fun wtf(throwable: Throwable, message: String, vararg args: Any) {
-      Timber.tag(TAG).wtf(throwable, message, args)
+    fun wtf(throwable: Throwable, message: String) {
+      Timber.tag(TAG).wtf(throwable, message)
     }
 
   }

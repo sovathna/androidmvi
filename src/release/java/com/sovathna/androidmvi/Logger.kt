@@ -7,33 +7,33 @@ class Logger {
 
     fun d(throwable: Throwable) {}
 
-    fun d(message: String, vararg args: Any) {}
+    fun d(message: String) {}
 
-    fun d(throwable: Throwable, message: String, vararg args: Any) {}
+    fun d(throwable: Throwable, message: String) {}
 
     fun e(throwable: Throwable) {}
 
-    fun e(message: String, vararg args: Any) {}
+    fun e(message: String) {}
 
-    fun e(throwable: Throwable, message: String, vararg args: Any) {}
+    fun e(throwable: Throwable, message: String) {}
 
     fun i(throwable: Throwable) {}
 
-    fun i(message: String, vararg args: Any) {}
+    fun i(message: String) {}
 
-    fun i(throwable: Throwable, message: String, vararg args: Any) {}
+    fun i(throwable: Throwable, message: String) {}
 
     fun v(throwable: Throwable) {}
 
-    fun v(message: String, vararg args: Any) {}
+    fun v(message: String) {}
 
-    fun v(throwable: Throwable, message: String, vararg args: Any) {}
+    fun v(throwable: Throwable, message: String) {}
 
     fun wtf(throwable: Throwable) {}
 
-    fun wtf(message: String, vararg args: Any) {}
+    fun wtf(message: String) {}
 
-    fun wtf(throwable: Throwable, message: String, vararg args: Any) {}
+    fun wtf(throwable: Throwable, message: String) {}
 
   }
 }
