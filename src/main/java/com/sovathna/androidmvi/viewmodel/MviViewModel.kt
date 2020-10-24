@@ -1,5 +1,6 @@
 package com.sovathna.androidmvi.viewmodel
 
+import androidx.lifecycle.ViewModel
 import com.sovathna.androidmvi.intent.MviIntent
 import com.sovathna.androidmvi.result.MviResult
 import com.sovathna.androidmvi.state.MviState
@@ -9,16 +10,16 @@ import io.reactivex.functions.BiFunction
 import io.reactivex.subjects.PublishSubject
 
 abstract class MviViewModel<I : MviIntent, R : MviResult, S : MviState> :
-  BaseViewModel<I, S>() {
+  ViewModel(), BaseViewModel<I, S> {
 
   protected val disposables = CompositeDisposable()
   protected val intents = PublishSubject.create<I>()
 
+  protected abstract val reducer: BiFunction<S, R, S>
+
   override fun init(intents: Observable<I>) {
     intents.subscribe(this.intents)
   }
-
-  protected abstract val reducer: BiFunction<S, R, S>
 
   override fun onCleared() {
     disposables.clear()
