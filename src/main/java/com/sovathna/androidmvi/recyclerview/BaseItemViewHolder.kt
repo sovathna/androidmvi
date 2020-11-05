@@ -5,6 +5,12 @@ import androidx.recyclerview.widget.RecyclerView
 
 abstract class BaseItemViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
 
-  abstract fun bindView(item: BaseItem, clickListener: ((Int, BaseItem) -> Unit)? = null)
+  open fun bindView(item: BaseItem, itemClickListener: ((Int, BaseItem) -> Unit)? = null) {
+    if (itemClickListener != null) {
+      itemView.setOnClickListener { itemClickListener(adapterPosition, item) }
+    } else {
+      itemView.setOnClickListener(null)
+    }
+  }
 
 }
