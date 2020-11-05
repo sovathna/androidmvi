@@ -12,7 +12,7 @@ import io.reactivex.Observable
 
 abstract class MviFragment
 <I : MviIntent, S : MviState, VM : BaseViewModel<I, S>>(
-  @LayoutRes private val layoutRes: Int
+  @LayoutRes layoutRes: Int
 ) : Fragment(layoutRes) {
 
   protected abstract val viewModel: VM
@@ -28,6 +28,10 @@ abstract class MviFragment
 
   override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
     super.onViewCreated(view, savedInstanceState)
+  }
+
+  override fun onResume() {
+    super.onResume()
     viewModel.stateLiveData.observe(viewLifecycleOwner, Observer(this::render))
   }
 

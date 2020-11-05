@@ -10,7 +10,7 @@ import com.sovathna.androidmvi.viewmodel.BaseViewModel
 import io.reactivex.Observable
 
 abstract class MviActivity<I : MviIntent, S : MviState, VM : BaseViewModel<I, S>>(
-  @LayoutRes private val layoutRes: Int
+  @LayoutRes layoutRes: Int
 ) : AppCompatActivity(layoutRes) {
 
   protected abstract val viewModel: VM
