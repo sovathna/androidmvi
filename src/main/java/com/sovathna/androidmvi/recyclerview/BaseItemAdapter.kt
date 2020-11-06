@@ -8,7 +8,7 @@ abstract class BaseItemAdapter :
 
   private var itemClickListener: ((Int, BaseItem) -> Unit)? = null
 
-  fun setClickListener(itemClickListener: ((Int, BaseItem) -> Unit)?) {
+  fun setItemClickListener(itemClickListener: ((Int, BaseItem) -> Unit)?) {
     this.itemClickListener = itemClickListener
   }
 
