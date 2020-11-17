@@ -24,7 +24,6 @@ abstract class MviDialogFragment<I : MviIntent, S : MviState, VM : BaseViewModel
 
   override fun onCreate(savedInstanceState: Bundle?) {
     super.onCreate(savedInstanceState)
-
     viewModel.init(intents())
   }
 
