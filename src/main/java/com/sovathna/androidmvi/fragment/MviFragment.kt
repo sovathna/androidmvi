@@ -9,20 +9,19 @@ import com.sovathna.androidmvi.state.MviState
 import com.sovathna.androidmvi.viewmodel.BaseViewModel
 import io.reactivex.Observable
 
-abstract class MviFragment
-<I : MviIntent, S : MviState, VM : BaseViewModel<I, S>>(
+abstract class MviFragment<I : MviIntent, S : MviState, VM : BaseViewModel<I, S>>(
   @LayoutRes layoutRes: Int
 ) : Fragment(layoutRes) {
 
   protected abstract val viewModel: VM
 
-  abstract fun intents(): Observable<I>
+  abstract val intents: Observable<I>
 
   abstract fun render(state: S)
 
   override fun onCreate(savedInstanceState: Bundle?) {
     super.onCreate(savedInstanceState)
-    viewModel.init(intents())
+    viewModel.init(intents)
   }
 
   override fun onResume() {
