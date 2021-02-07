@@ -18,13 +18,13 @@ abstract class MviDialogFragment<I : MviIntent, S : MviState, VM : BaseViewModel
 
   protected abstract val viewModel: VM
 
-  abstract fun intents(): Observable<I>
+  abstract val intents: Observable<I>
 
   abstract fun render(state: S)
 
   override fun onCreate(savedInstanceState: Bundle?) {
     super.onCreate(savedInstanceState)
-    viewModel.init(intents())
+    viewModel.init(intents)
   }
 
   override fun onResume() {

@@ -15,14 +15,14 @@ abstract class MviActivity<I : MviIntent, S : MviState, VM : BaseViewModel<I, S>
 
   protected abstract val viewModel: VM
 
-  abstract fun intents(): Observable<I>
+  abstract val intents: Observable<I>
 
   abstract fun render(state: S)
 
   override fun onCreate(savedInstanceState: Bundle?) {
     super.onCreate(savedInstanceState)
 
-    viewModel.init(intents())
+    viewModel.init(intents)
     viewModel.stateLiveData.observe(this, Observer(this::render))
 
   }
