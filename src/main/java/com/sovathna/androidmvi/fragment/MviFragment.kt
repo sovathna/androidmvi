@@ -29,4 +29,9 @@ abstract class MviFragment<I : MviIntent, S : MviState, VM : BaseViewModel<I, S>
     viewModel.stateLiveData.observe(viewLifecycleOwner, Observer(this::render))
   }
 
+  override fun onPause() {
+    super.onPause()
+    viewModel.stateLiveData.removeObservers(viewLifecycleOwner)
+  }
+
 }
