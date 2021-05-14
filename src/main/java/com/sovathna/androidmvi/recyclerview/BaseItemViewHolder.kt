@@ -5,9 +5,9 @@ import androidx.recyclerview.widget.RecyclerView
 
 abstract class BaseItemViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
 
-  open fun bindView(item: BaseItem, itemClickListener: ((Int, BaseItem) -> Unit)? = null) {
-    if (itemClickListener != null) {
-      itemView.setOnClickListener { itemClickListener(adapterPosition, item) }
+  open fun bindView(item: BaseItem, clickListener: ((Int, Int, BaseItem) -> Unit)? = null) {
+    if (clickListener != null) {
+      itemView.setOnClickListener { clickListener(it.id, adapterPosition, item) }
     } else {
       itemView.setOnClickListener(null)
     }
