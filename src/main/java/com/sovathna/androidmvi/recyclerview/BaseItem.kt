@@ -3,11 +3,11 @@ package com.sovathna.androidmvi.recyclerview
 import android.annotation.SuppressLint
 import androidx.recyclerview.widget.DiffUtil
 
-abstract class BaseItem {
+interface BaseItem {
   companion object {
     val ITEM_CALLBACK = object : DiffUtil.ItemCallback<BaseItem>() {
       override fun areItemsTheSame(oldItem: BaseItem, newItem: BaseItem) =
-        oldItem.uniqueKey == newItem.uniqueKey
+        oldItem.uid == newItem.uid
 
       @SuppressLint("DiffUtilEquals")
       override fun areContentsTheSame(oldItem: BaseItem, newItem: BaseItem) =
@@ -15,5 +15,5 @@ abstract class BaseItem {
     }
   }
 
-  abstract val uniqueKey: String
+  val uid: String
 }
