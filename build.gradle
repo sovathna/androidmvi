@@ -21,17 +21,6 @@ android {
       proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
     }
   }
-  flavorDimensions "api"
-  productFlavors {
-    minApi21 {
-      dimension "api"
-      minSdkVersion 21
-    }
-    minApi16 {
-      dimension "api"
-      minSdkVersion 16
-    }
-  }
   compileOptions {
     sourceCompatibility JavaVersion.VERSION_1_8
     targetCompatibility JavaVersion.VERSION_1_8
