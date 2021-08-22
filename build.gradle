@@ -6,7 +6,7 @@ android {
   buildToolsVersion "30.0.3"
 
   defaultConfig {
-    minSdkVersion 16
+    minSdkVersion 21
     targetSdkVersion 30
     versionCode 1
     versionName "1.0"
@@ -53,7 +53,7 @@ dependencies {
 
   api "com.google.dagger:hilt-android:$hiltVersion"
 
-  api 'com.jakewharton.timber:timber:5.0.0'
+  api "com.jakewharton.timber:timber:$timberVersion"
 
   testImplementation 'junit:junit:4.13.1'
   androidTestImplementation 'androidx.test.ext:junit:1.1.2'
