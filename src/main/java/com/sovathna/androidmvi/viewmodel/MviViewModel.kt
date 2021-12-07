@@ -7,11 +7,11 @@ import com.sovathna.androidmvi.domain.MviInteractor
 import com.sovathna.androidmvi.intent.MviIntent
 import com.sovathna.androidmvi.result.MviResult
 import com.sovathna.androidmvi.state.MviState
-import io.reactivex.BackpressureStrategy
-import io.reactivex.Observable
-import io.reactivex.disposables.CompositeDisposable
-import io.reactivex.functions.BiFunction
-import io.reactivex.subjects.PublishSubject
+import io.reactivex.rxjava3.core.BackpressureStrategy
+import io.reactivex.rxjava3.core.Observable
+import io.reactivex.rxjava3.disposables.CompositeDisposable
+import io.reactivex.rxjava3.functions.BiFunction
+import io.reactivex.rxjava3.subjects.PublishSubject
 
 abstract class MviViewModel<I : MviIntent, R : MviResult, S : MviState>(private val interactor: MviInteractor<I, R>) :
   ViewModel(), BaseViewModel<I, S> {

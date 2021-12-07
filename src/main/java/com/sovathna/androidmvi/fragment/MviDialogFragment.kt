@@ -10,7 +10,7 @@ import androidx.lifecycle.Observer
 import com.sovathna.androidmvi.intent.MviIntent
 import com.sovathna.androidmvi.state.MviState
 import com.sovathna.androidmvi.viewmodel.BaseViewModel
-import io.reactivex.Observable
+import io.reactivex.rxjava3.core.Observable
 
 abstract class MviDialogFragment<I : MviIntent, S : MviState, VM : BaseViewModel<I, S>>(
   @LayoutRes private val layoutRes: Int
